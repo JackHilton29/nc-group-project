@@ -1,0 +1,20 @@
+# Default values for frontend.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: public.ecr.aws/v2h8l1j0/nc-learners-frontend
+  tag: "1.1.0"
+
+# Frontend server variables
+server:
+  name: fe-server
+  baseApi: aff39033826204c92b32e1770f130708-751547794.eu-west-2.elb.amazonaws.com
+
+# Frontend service variables
+service:
+  name: fe-service
+  type: LoadBalancer
+  port: 80
